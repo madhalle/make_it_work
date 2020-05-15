@@ -23,16 +23,22 @@ RSpec.describe "when a user visits the project show page" do
 
     expect(page).to have_content("Number of Contestants: #{@news_chic.contestant_projects.length}")
   end
-end
 
+  it "can see average years of experience of contestants on project" do
+    visit "/projects/#{@news_chic.id}"
+
+    expect(page).to have_content("Average Contestant Experience: 12.5 years")
+  end
+end
 # ```
-# User Story 3 of 3
+# User Story Extension 1 - Average years of experience for contestants by project
+#
 # As a visitor,
 # When I visit a project's show page
-# I see a count of the number of contestants on this project
-#
+# I see the average years of experience for the contestants that worked on that project
 # (e.g.    Litfit
 #     Material: Lamp Shade
 #   Challenge Theme: Apartment Furnishings
-#   Number of Contestants: 3 )
+#   Number of Contestants: 3
+#   Average Contestant Experience: 10.25 years)
 # ```
