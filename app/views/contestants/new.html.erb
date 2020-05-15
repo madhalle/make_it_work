@@ -1,0 +1,13 @@
+<h1>Add Contestant to Project</h1>
+<%= form_tag("/projects/#{@project_id}", method: :post) do %>
+  <p>Enter the information for a new contestant.</p>
+  <%= label_tag "Name" %>
+  <%= text_field_tag :name %><br/>
+  <%= label_tag "Age" %>
+  <%= number_field_tag :age %><br/>
+  <%= label_tag "Home Town" %>
+  <%= text_field_tag :hometown %><br/>
+  <%= label_tag "Years of Experience" %>
+  <%= number_field_tag :years_of_experience %><br/>
+  <%= submit_tag 'Submit' %>
+<% end %>
